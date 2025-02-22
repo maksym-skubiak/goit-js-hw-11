@@ -1,12 +1,12 @@
 import 'izitoast/dist/css/iziToast.min.css';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-import { fetchImages } from './pixabay-api';
+import { fetchImages } from './js/pixabay-api';
 import {
   displayImages,
   showLoadingIndicator,
   hideLoadingIndicator,
-} from './render-functions';
+} from './js/render-functions';
 
 const searchForm = document.querySelector('#search-form');
 const searchInput = document.querySelector('#search-input');
