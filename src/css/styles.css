@@ -28,3 +28,15 @@ button {
   gap: 20px;
   flex-direction: column;
 }
+
+.loader {
+  display: none;
+  font-size: 18px;
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loader.visible {
+  display: block;
+}

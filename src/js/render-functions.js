@@ -57,6 +57,7 @@ const createInfoElement = (label, value) => {
 
 export const showLoadingIndicator = () => {
   const loader = document.querySelector('.loader');
+  loader.textContent = 'Loading images, please wait...';
   loader.classList.add('visible');
 };
 
