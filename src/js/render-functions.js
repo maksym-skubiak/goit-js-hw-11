@@ -1,4 +1,5 @@
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
@@ -6,7 +7,7 @@ export const displayImages = images => {
   const gallery = document.querySelector('.gallery');
   gallery.innerHTML = '';
 
-  if (images.length === 0) {
+  if (!images || images.length === 0) {
     iziToast.error({
       message:
         'Sorry, there are no images matching your search query. Please try again!',
@@ -64,4 +65,11 @@ export const showLoadingIndicator = () => {
 export const hideLoadingIndicator = () => {
   const loader = document.querySelector('.loader');
   loader.classList.remove('visible');
+};
+
+export const showErrorNotification = error => {
+  iziToast.error({
+    title: 'Error',
+    message: `Something went wrong: ${error.message}`,
+  });
 };
